@@ -1,5 +1,5 @@
 
-class DividendError(Exception):
+class IntegerCheckError(Exception):
     """
 
     """

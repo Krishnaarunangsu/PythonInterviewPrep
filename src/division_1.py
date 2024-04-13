@@ -1,4 +1,4 @@
-from custom_exception.custom_exception import DividendError
+from custom_exception.custom_exception import IntegerCheckError
 class Division:
     """
     Class for Division
@@ -24,15 +24,15 @@ class Division:
         Returns:
 
         Raises:
-              DividendError
+              IntegerCheckError
         """
         if not isinstance(start,int) or not isinstance(end, int):
-            raise DividendError('Dividend is not an integer', 100)
+            raise IntegerCheckError('Dividend is not an integer', 100)
         else:
             if start < 0:
-                raise DividendError('Dividend is less than zero', 101)
+                raise IntegerCheckError('Dividend is less than zero', 101)
             elif end <= 0:
-                raise DividendError('Dividend is less than or equal to zero', 100)
+                raise IntegerCheckError('Dividend is less than or equal to zero', 100)
             else:
                 self.start = start
                 self.end = end
